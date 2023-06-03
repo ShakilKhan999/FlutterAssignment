@@ -18,6 +18,15 @@ class ToDoItems extends StatefulWidget {
 }
 
 class _ToDoItemsState extends State<ToDoItems> {
+  late TodoProvider todoProvider;
+  @override
+  void initState() {
+
+    todoProvider = Provider.of<TodoProvider>(context, listen: false);
+    todoProvider.todoList.clear();
+    todoProvider.getAllToDoItem();
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(

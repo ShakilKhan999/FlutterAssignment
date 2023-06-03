@@ -1,3 +1,4 @@
+import 'package:demo_stripe/auth/auth_service.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -65,7 +66,7 @@ class _NewToDoPageState extends State<NewToDoPage> {
 
   void _saveToDo() async {
     final todoItem = ToDoItem(
-      id: DateTime.now().millisecondsSinceEpoch,
+      id: AuthService.user!.uid,
       task_title: todoitemscontroller.text,
       task_description: todo_descriptioncontroller.text,
     );

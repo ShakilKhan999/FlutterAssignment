@@ -5,7 +5,7 @@ const  String tableTodoColTitle ='taskname';
 const  String tableTodoColIsChecked ='ischecked';
 const  String tableTodoColDes ='description';
 class ToDoItem{
-  int? id;
+  String? id;
   String task_title;
   String? task_description;
   bool ischecked;

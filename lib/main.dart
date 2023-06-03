@@ -21,7 +21,7 @@ void main() async{
       'pk_test_51MtV0SK7aOy5qYua6WoCCU7FVQ1Jz1drilD9iH3r821EOuzchqh2YWF7FgMYi5uMldm8eEAwC4AxI4JWbbV3zWhY00NRhq94vJ';
   runApp(MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (context)=> TodoProvider() ..getAllToDoItem()),
+        ChangeNotifierProvider(create: (context)=> TodoProvider()),
         ChangeNotifierProvider.value(value: PostProvider())
       ],
       child: const MyApp()));
